@@ -29,7 +29,6 @@ export default function ProjectsPage() {
       media: [
         { type: 'image', src: '/images/ecommerce-1.jpg', alt: 'Dashboard principal' },
         { type: 'image', src: '/images/ecommerce-2.jpg', alt: 'Panel de productos' },
-        { type: 'video', src: '/videos/ecommerce-demo.mp4', alt: 'Demo del chatbot' },
         { type: 'image', src: '/images/ecommerce-3.jpg', alt: 'Sistema de pagos' }
       ],
       challenge: 'El cliente necesitaba automatizar su proceso de ventas y atención al cliente sin aumentar personal.',
