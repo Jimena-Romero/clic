@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
-export default function ServicesPage() {
+// Componente interno que usa useSearchParams
+function ServicesContent() {
   const searchParams = useSearchParams();
   const [activeService, setActiveService] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -399,5 +400,21 @@ export default function ServicesPage() {
         }
       `}</style>
     </main>
+  );
+}
+
+// Componente principal con Suspense
+export default function ServicesPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-[#FFF9CE] via-[#FFFADB] to-[#FFF9CE] flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-[#110083]/20 border-t-[#110083] rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-xl text-[#110083] font-semibold">Cargando servicios...</p>
+        </div>
+      </div>
+    }>
+      <ServicesContent />
+    </Suspense>
   );
 }
