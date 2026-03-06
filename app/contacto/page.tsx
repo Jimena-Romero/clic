@@ -130,10 +130,10 @@ export default function ContactPage() {
 
               <div className="space-y-4 text-lg text-[#110083]/80 leading-relaxed mb-8">
                 <p>
-                  <strong className="text-[#110083] font-semibold">Analista Universitaria en Sistemas de Información</strong> recibida de la UTN FRVM, y estudiante avanzada de Ingeniería en Sistemas.
+                  <strong className="text-[#110083] font-semibold">Analista Universitaria en Sistemas de Información</strong> recibida de la UTN FRVM, y estudiante de quinto año de Ingeniería en Sistemas de Información.
                 </p>
                 <p>
-                  Hago sistemas que <strong className="text-[#110083] font-semibold">resuelven</strong> problemas reales. Que te ahorran tiempo, plata y dolores de cabeza.
+                  Hago sistemas que <strong className="text-[#110083] font-semibold">resuelven</strong> problemas reales. Ahorrando tiempo, costos y dolores de cabeza.
                 </p>
                 <p>
                   Si tenés un caos que necesita orden, una idea que necesita forma, o un proceso manual que te está consumiendo... llegaste al lugar correcto.
@@ -141,7 +141,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {['🎓 UTN FRVM', '💻 Full-Stack', '⚡ Automatización', '🤖 IA'].map((tag, i) => (
+                {['🎓 UTN FRVM', '💻 Full-Stack', '⚡ Automatización', '🤖 Procesos'].map((tag, i) => (
                   <div 
                     key={i}
                     className="px-4 py-2 rounded-full bg-[#110083]/5 text-[#110083] text-sm font-medium hover:bg-[#110083]/10 transition-colors cursor-default"

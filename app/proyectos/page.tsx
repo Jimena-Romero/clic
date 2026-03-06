@@ -13,10 +13,10 @@ export default function ProjectsPage() {
     {
       id: 1,
       category: 'ecommerce',
-      title: 'E-commerce con IA',
+      title: 'E-commerce con Chatbot',
       subtitle: 'Plataforma de ventas automatizada',
       description: 'Sistema completo de e-commerce con panel administrativo, gestión de productos y categorías, y chatbot con inteligencia artificial para atención al cliente 24/7.',
-      tags: ['E-commerce', 'Admin Panel', 'IA', 'Chatbot'],
+      tags: ['E-commerce', 'Admin Panel', 'Chatbot'],
       features: [
         'Panel admin completo',
         'Gestión de productos y categorías',
@@ -29,10 +29,10 @@ export default function ProjectsPage() {
       media: [
         { type: 'image', src: '/images/ecommerce-1.jpg', alt: 'Dashboard principal' },
         { type: 'image', src: '/images/ecommerce-2.jpg', alt: 'Panel de productos' },
-        { type: 'image', src: '/images/ecommerce-3.jpg', alt: 'Sistema de pagos' }
+        { type: 'image', src: '/images/ecommerce-3.jpg', alt: 'Sistema de pagos' },
       ],
       challenge: 'El cliente necesitaba automatizar su proceso de ventas y atención al cliente sin aumentar personal.',
-      solution: 'Desarrollamos una plataforma completa con IA que gestiona consultas 24/7 y procesa pedidos automáticamente.',
+      solution: 'Desarrollamos una plataforma completa que gestiona consultas 24/7 y procesa pedidos automáticamente.',
       results: [
         '70% reducción en tiempo de respuesta',
         '3x aumento en conversiones',
@@ -70,6 +70,64 @@ export default function ProjectsPage() {
     },
     {
       id: 3,
+      category: 'erp',
+      title: 'Sistema de Gestión Empresarial para Inmobiliaria',
+      subtitle: 'Sistema web completo',
+      description: 'Desarrollo de un sistema web completo para la gestión completa de una inmobiliaria, contemplando el proceso de presupuestación de trabajos extras.',
+      tags: ['Automatización', 'Sistema Web', 'ERP', 'React'],
+      features: [
+        'Generación automática de presupuestos de trabajos extras',
+        'Gestión de obras y clientes',
+        'Control de stock actualizado de materiales',
+        'Generación de costos de manos de obra'
+      ],
+      status: 'Vendido y en uso',
+      color: 'from-[#110083]/80 to-[#110083]/50',
+      thumbnail: '/images/mobiliaria1.jpg',
+      media: [
+        { type: 'image', src: '/images/mobiliaria2.jpg', alt: 'Interface del sistema' },
+        { type: 'image', src: '/images/mobiliaria3.jpg', alt: 'Interface del sistema' },
+        { type: 'image', src: '/images/mobiliaria4.jpg', alt: 'Interface del sistema' },
+      ],
+      challenge: 'Gestionar los procesos principales de una inmobiliaria. Registrando clientes, obras, materiales, costos y generando presupuestos de trabajos extras permitiendo exportarlos en formato pdf.',
+      solution: 'Sistema web completo para la gestión completa de inmobiliarias, incluyendo la presupuestación de trabajos extras.',
+      results: [
+        '80% menos tiempo por presupuesto',
+        '95% reducción de errores',
+        'Plantillas estandarizadas profesionales'
+      ]
+    },
+    {
+      id: 4,
+      category: 'educacion',
+      title: 'Simulador de Exámenes de idioma',
+      subtitle: 'Plataforma de estudio de idioma',
+      description: 'Sistema completo de simulador de exámenes, cálculo de promedios y resultados de aprendizaje, resaltado de aciertos y errores con su respectiva corrección y cronómetro del tiempo de resolución.',
+      tags: ['Educación', 'Idioma', 'Simulador'],
+      features: [
+        'Simulador de exámen',
+        'Cálculo de porcentajes',
+        'Aciertos y errores',
+        'Tiempo cronometrado'
+      ],
+      status: 'Vendido y en uso',
+      color: 'from-[#110083] to-[#110083]/70',
+      thumbnail: '/images/simulador-aleman.jpg', // Imagen principal para la card
+      media: [
+        { type: 'image', src: '/images/simulador-aleman3.jpg', alt: 'Ejercicio' },
+        { type: 'image', src: '/images/simulador-aleman2.jpg', alt: 'Correccion automatica' },
+        { type: 'image', src: '/images/simulador-aleman4.jpg', alt: 'Resultados' },
+      ],
+      challenge: 'El cliente necesitaba practicar examenes de alemán y obtener un feedback para mejorar su rendimiento.',
+      solution: 'Desarrollamos una plataforma completa que incluye un simulador de exámenes, cálculo de promedios y resultados de aprendizaje, resaltado de aciertos y errores con su respectiva corrección.',
+      results: [
+        'Mayor aprendizaje del idioma',
+        'Toma del tiempo cronometrado',
+        'Mejor preparación para exámenes oficiales'
+      ]
+    },
+    {
+      id: 5,
       category: 'automatizacion',
       title: 'Sistema de Presupuestos Automatizados',
       subtitle: 'Macros inteligentes para estudio contable',
@@ -95,14 +153,16 @@ export default function ProjectsPage() {
         '95% reducción de errores',
         'Plantillas estandarizadas profesionales'
       ]
-    }
+    },
   ];
 
   const filters = [
     { id: 'todos', label: 'Todos' },
     { id: 'ecommerce', label: 'E-commerce' },
+    { id: 'erp', label: 'Sistemas de Gestión Empresarial' },
     { id: 'finanzas', label: 'Finanzas' },
-    { id: 'automatizacion', label: 'Automatización' }
+    { id: 'automatizacion', label: 'Automatización' },
+    { id: 'educacion', label: 'Educación' }
   ];
 
   const filteredProjects = activeFilter === 'todos' 
