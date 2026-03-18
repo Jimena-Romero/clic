@@ -99,6 +99,38 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
+      category: 'EdTech & E-commerce',
+      title: 'LMS & Marketplace de Cursos',
+      subtitle: 'Plataforma educativa integral con gestión de pagos',
+      description: 'E-learning completo con roles diferenciados (Admin, Docente, Alumno), sistema de cobros automatizado y herramientas avanzadas de evaluación y seguimiento.',
+      tags: ['LMS', 'Mercado Pago', 'Educación IT'],
+      features: [
+        'Login multirrol (Admin, Docente, Alumno)',
+        'Pasarela de pagos con Mercado Pago',
+        'Creador de exámenes con corrección automática',
+        'Chat interno y seguimiento de progreso'
+      ],
+      status: 'Vendido y en uso',
+      color: 'from-[#110083] to-[#110083]/70',
+      thumbnail: '/images/cursos1.jpg',
+      media: [
+        { type: 'image', src: '/images/cursos2.jpg', alt: 'Catálogo de cursos disponibles' },
+        { type: 'image', src: '/images/cursos3.jpg', alt: 'Panel de gestión de exámenes' },
+        { type: 'image', src: '/images/cursos4.jpg', alt: 'Visualización de material PDF y Video' },
+        { type: 'image', src: '/images/cursos5.jpg', alt: 'Interfaz de chat alumno-docente' },
+        { type: 'image', src: '/images/cursos6.jpg', alt: 'Barra de progreso y calificaciones' },
+        { type: 'image', src: '/images/cursos7.jpg', alt: 'Dashboard administrativo de aranceles' },
+      ],
+      challenge: 'Digitalizar la oferta académica permitiendo la autogestión de docentes y la automatización de cobros y evaluaciones.',
+      solution: 'Desarrollamos un ecosistema donde el docente gestiona contenido multimedia y exámenes con puntaje de aprobación configurable, mientras el sistema procesa pagos y califica automáticamente.',
+      results: [
+        'Gestión autónoma de cursos y exámenes',
+        'Cobro de aranceles 100% automatizado',
+        'Feedback inmediato mediante corrección automática'
+      ]
+    },
+    {
+      id: 5,
       category: 'educacion',
       title: 'Simulador de Exámenes de idioma',
       subtitle: 'Plataforma de estudio de idioma',
@@ -127,31 +159,38 @@ export default function ProjectsPage() {
       ]
     },
     {
-      id: 5,
-      category: 'automatizacion',
-      title: 'Sistema de Presupuestos Automatizados',
-      subtitle: 'Macros inteligentes para estudio contable',
-      description: 'Desarrollo de macros personalizadas que automatizan la generación de presupuestos, eliminando tareas manuales y reduciendo errores en un 95%.',
-      tags: ['Automatización', 'Macros', 'Excel', 'VBA'],
+      id: 6,
+      category: 'LegalTech',
+      title: 'Legal Management System',
+      subtitle: 'Gestión integral de expedientes y comunicación',
+      description: 'Plataforma colaborativa para estudios jurídicos que centraliza el seguimiento de causas, intercambio documental y notificaciones en tiempo real.',
+      tags: ['Gestión Jurídica', 'Documentos Cloud', 'Tracking'],
       features: [
-        'Generación automática de presupuestos',
-        'Plantillas personalizadas',
-        'Reducción de errores',
-        'Ahorro de 80% del tiempo'
+        'Roles: Abogado, Cliente y Admin',
+        'Enrolamiento de clientes a casos específicos',
+        'Carga y descarga de documentos bilateral',
+        'Línea de tiempo de estados (Apertura a Cierre)'
       ],
       status: 'Vendido y en uso',
-      color: 'from-[#110083]/80 to-[#110083]/50',
-      thumbnail: '/images/macros-thumb.jpg',
+      color: 'from-[#110083] to-[#110083]/70',
+      thumbnail: '/images/estudio1.jpg',
       media: [
-        { type: 'image', src: '/images/macros-1.jpg', alt: 'Interface del sistema' },
-        { type: 'image', src: '/images/macros-thumb.jpg', alt: 'Interface del sistema' },
+        { type: 'image', src: '/images/estudio2.jpg', alt: 'Dashboard de seguimiento de casos' },
+        { type: 'image', src: '/images/estudio3.jpg', alt: 'Panel de gestión documental' },
+        { type: 'image', src: '/images/estudio4.jpg', alt: 'Línea de tiempo del estado procesal' },
+        { type: 'image', src: '/images/estudio5.jpg', alt: 'Vista del portal del cliente' },
+        { type: 'image', src: '/images/estudio6.jpg', alt: 'Centro de notificaciones y alertas' },
+        { type: 'image', src: '/images/estudio7.jpg', alt: 'Reportes de cierre de casos' },
+        { type: 'image', src: '/images/estudio8.jpg', alt: 'Reportes de cierre de casos' },
+        { type: 'image', src: '/images/estudio9.jpg', alt: 'Reportes de cierre de casos' },
+        { type: 'image', src: '/images/estudio10.jpg', alt: 'Reportes de cierre de casos' },
       ],
-      challenge: 'Generar presupuestos tomaba 2+ horas por documento con alto riesgo de errores.',
-      solution: 'Macros inteligentes que generan presupuestos completos en menos de 2 minutos con datos actualizados.',
+      challenge: 'Reducir la fricción en la comunicación abogado-cliente y centralizar el flujo de documentación de los expedientes.',
+      solution: 'Implementamos un sistema de seguimiento transparente con una barra de progreso de estados y notificaciones automáticas ante cada movimiento del caso.',
       results: [
-        '80% menos tiempo por presupuesto',
-        '95% reducción de errores',
-        'Plantillas estandarizadas profesionales'
+        'Transparencia total en el estado del proceso',
+        'Intercambio documental seguro y ordenado',
+        'Reducción de consultas manuales vía notificaciones'
       ]
     },
   ];
