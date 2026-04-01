@@ -99,7 +99,7 @@ export default function ProjectsPage() {
     },
     {
       id: 4,
-      category: 'EdTech & E-commerce',
+      category: 'educacion',
       title: 'LMS & Marketplace de Cursos',
       subtitle: 'Plataforma educativa integral con gestión de pagos',
       description: 'E-learning completo con roles diferenciados (Admin, Docente, Alumno), sistema de cobros automatizado y herramientas avanzadas de evaluación y seguimiento.',
@@ -142,7 +142,7 @@ export default function ProjectsPage() {
         'Aciertos y errores',
         'Tiempo cronometrado'
       ],
-      status: 'Vendido y en uso',
+      status: 'En producción',
       color: 'from-[#110083] to-[#110083]/70',
       thumbnail: '/images/simulador-aleman.jpg', // Imagen principal para la card
       media: [
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
     },
     {
       id: 6,
-      category: 'LegalTech',
+      category: 'legal',
       title: 'Legal Management System',
       subtitle: 'Gestión integral de expedientes y comunicación',
       description: 'Plataforma colaborativa para estudios jurídicos que centraliza el seguimiento de causas, intercambio documental y notificaciones en tiempo real.',
@@ -200,7 +200,7 @@ export default function ProjectsPage() {
     { id: 'ecommerce', label: 'E-commerce' },
     { id: 'erp', label: 'Sistemas de Gestión Empresarial' },
     { id: 'finanzas', label: 'Finanzas' },
-    { id: 'automatizacion', label: 'Automatización' },
+    { id: 'legal', label: 'LegalTech' },
     { id: 'educacion', label: 'Educación' }
   ];
 

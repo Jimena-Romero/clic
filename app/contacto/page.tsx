@@ -17,10 +17,10 @@ export default function ContactPage() {
       id: 'email',
       icon: '📧',
       title: 'Email',
-      value: 'romerojimena700@gmail.com',
+      value: 'clic.solutions.dev@gmail.com',
       description: 'Respondo en 24hs',
       color: 'from-[#110083] to-[#110083]/70',
-      link: 'mailto:romerojimena700@gmail.com'
+      link: 'mailto:clic.solutions.dev@gmail.com'
     },
     {
       id: 'whatsapp',
