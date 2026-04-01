@@ -27,6 +27,12 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-[#FFF9CE] via-[#FFFADB] to-[#FFF9CE] relative overflow-hidden">
+      {/* Patrón de puntos de fondo */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        backgroundImage: 'radial-gradient(circle, rgba(17,0,131,0.08) 1px, transparent 1px)',
+        backgroundSize: '32px 32px',
+      }} />
+
       {/* Elementos flotantes de fondo */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
@@ -63,7 +69,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold text-[#110083] leading-[1.1] mb-8">
               Dale el{" "}
               <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-[#110083] to-purple-600 bg-clip-text text-transparent">
+                <span className="relative z-10 shimmer-clic">
                   clic
                 </span>
                 <svg 
@@ -102,14 +108,17 @@ export default function Home() {
           </div>
 
             {/* Stats */}
-            <div className="mt-16 grid grid-cols-2 gap-12">
+            <div className="mt-16 flex gap-10">
               {[
                 { num: "90%", label: "Tiempo ahorrado" },
-                { num: "24/7", label: "Disponibilidad" }
+                { num: "24/7", label: "Disponibilidad"  },
               ].map((stat, i) => (
-                <div key={i} className="text-center lg:text-left">
-                  <div className="text-3xl font-bold text-[#110083] mb-1">{stat.num}</div>
-                  <div className="text-sm text-[#110083]/60">{stat.label}</div>
+                <div key={i} className="flex items-center gap-4">
+                  <div className="w-px h-12 bg-gradient-to-b from-transparent via-[#110083]/30 to-transparent" />
+                  <div>
+                    <div className="text-3xl font-bold text-[#110083] mb-0.5">{stat.num}</div>
+                    <div className="text-sm text-[#110083]/50">{stat.label}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -240,6 +249,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Separador con onda */}
+      <div className="relative w-full overflow-hidden leading-none" style={{ height: '60px' }}>
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="absolute w-full h-full">
+          <path
+            d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z"
+            fill="rgba(17,0,131,0.04)"
+          />
+          <path
+            d="M0,40 C360,10 720,60 1080,30 C1260,15 1380,35 1440,40"
+            fill="none"
+            stroke="rgba(17,0,131,0.12)"
+            strokeWidth="1.5"
+          />
+        </svg>
+      </div>
+
+
       {/* SERVICIOS */}
       <section className="relative max-w-7xl mx-auto px-6 pb-32">
         <div className="text-center mb-16">
@@ -259,6 +285,7 @@ export default function Home() {
             color="from-[#110083] to-[#110083]/80"
             delay="0s"
             serviceId="automatizacion"
+            index={1}
           />
           <ServiceCard
             icon={<RefreshIcon />}
@@ -267,6 +294,7 @@ export default function Home() {
             color="from-[#110083]/90 to-[#110083]/70"
             delay="0.1s"
             serviceId="orden"
+            index={2}
           />
           <ServiceCard
             icon={<LayersIcon />}
@@ -275,11 +303,30 @@ export default function Home() {
             color="from-[#110083]/80 to-[#110083]/60"
             delay="0.2s"
             serviceId="soluciones"
+            index={3}
           />
         </div>
       </section>
 
       <style jsx>{`
+        @keyframes shimmerMove {
+          0%   { background-position: -300% center; }
+          100% { background-position: 300% center; }
+        }
+
+        .shimmer-clic {
+          background: linear-gradient(90deg,
+            #110083 0%, #110083 20%,
+            #7c3aed 40%, #c084fc 55%,
+            #7c3aed 70%, #110083 100%
+          );
+          background-size: 300% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: shimmerMove 4s linear infinite;
+        }
+
         @keyframes fadeInUp {
           from {
             opacity: 0;
@@ -316,30 +363,45 @@ export default function Home() {
         .animate-float-gentle {
           animation: float-gentle 6s ease-in-out infinite;
         }
+
+        @keyframes scroll-dot {
+          0%, 100% { transform: translateY(0); opacity: 1; }
+          50%       { transform: translateY(6px); opacity: 0.3; }
+        }
+        .animate-scroll-dot {
+          animation: scroll-dot 1.5s ease-in-out infinite;
+        }
       `}</style>
     </main>
   );
 }
 
-function ServiceCard({ icon, title, text, color, delay, serviceId }: { 
-  icon: React.ReactNode; 
-  title: string; 
-  text: string; 
-  color: string; 
+function ServiceCard({ icon, title, text, color, delay, serviceId, index }: {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+  color: string;
   delay: string;
   serviceId: string;
+  index: number;
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
-      className="group relative bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/40 hover:bg-white/80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+    <div
+      className="group relative bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white/40 hover:bg-white/80 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 cursor-pointer overflow-hidden"
       style={{
         animation: `fadeInUp 0.8s ease-out ${delay} both`
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* Número de fondo */}
+      <div className="absolute -bottom-4 -right-2 text-[9rem] font-black leading-none select-none pointer-events-none transition-all duration-500 group-hover:scale-110"
+        style={{ color: 'rgba(17,0,131,0.055)' }}>
+        {String(index).padStart(2, '0')}
+      </div>
+
       <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`} />
       
       <div className={`relative w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br ${color} flex items-center justify-center text-white shadow-lg transition-transform duration-500 ${isHovered ? 'scale-110 rotate-6' : ''}`}>

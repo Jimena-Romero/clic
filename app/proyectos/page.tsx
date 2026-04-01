@@ -250,7 +250,7 @@ export default function ProjectsPage() {
 
             <h1 className="text-5xl md:text-6xl font-bold text-[#110083] mb-6">
               Proyectos que <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-[#110083] to-[#110083]/60 bg-clip-text text-transparent">
+                <span className="relative z-10 shimmer-word">
                   transforman
                 </span>
                 <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 20">
@@ -347,14 +347,24 @@ export default function ProjectsPage() {
 
       <style jsx>{`
         @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(30px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes shimmerMove {
+          0%   { background-position: -300% center; }
+          100% { background-position: 300% center; }
+        }
+        .shimmer-word {
+          background: linear-gradient(90deg,
+            #110083 0%, #110083 20%,
+            #7c3aed 40%, #c084fc 55%,
+            #7c3aed 70%, #110083 100%
+          );
+          background-size: 300% auto;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: shimmerMove 4s linear infinite;
         }
       `}</style>
     </main>
