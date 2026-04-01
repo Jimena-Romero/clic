@@ -11,16 +11,16 @@ export default function Footer() {
       id: 'instagram',
       name: 'Instagram',
       icon: '📸',
-      username: '@jimeromero0',
-      url: 'https://instagram.com/jimeromero0',
+      username: '@clic.solutions',
+      url: 'https://instagram.com/clic.solutions',
       color: 'from-purple-500 to-pink-500'
     },
     {
       id: 'linkedin',
       name: 'LinkedIn',
       icon: '💼',
-      username: 'Jimena Romero',
-      url: 'https://www.linkedin.com/in/jimena-romero-a7b01b300/',
+      username: 'Clic',
+      url: 'https://www.linkedin.com/company/clic-solutions/about/?viewAsMember=true',
       color: 'from-blue-600 to-blue-400'
     },
     {
@@ -35,8 +35,8 @@ export default function Footer() {
       id: 'email',
       name: 'Email',
       icon: '📧',
-      username: 'romerojimena700@gmail.com',
-      url: 'mailto:romerojimena700@gmail.com',
+      username: 'clic.solutions.dev@gmail.com',
+      url: 'mailto:clic.solutions.dev@gmail.com',
       color: 'from-[#110083] to-[#110083]/70'
     },
     {
